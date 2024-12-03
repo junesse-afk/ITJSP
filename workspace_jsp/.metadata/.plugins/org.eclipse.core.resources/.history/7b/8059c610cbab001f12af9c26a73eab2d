@@ -1,0 +1,28 @@
+package jsp09_servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+// xxx.test5로 끝나는 모든 서블릿 주소 매핑
+@WebServlet("*.test5")
+public class TestServlet5 extends HttpServlet {
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+	}
+	
+	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) {
+		System.out.println("TestServlet5 - doProcess()");
+	}
+	
+	
+	
+}

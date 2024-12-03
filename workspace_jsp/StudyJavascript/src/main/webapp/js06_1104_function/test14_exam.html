@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	// [ 2. 전달인자 X, 리턴값 O 함수 연습 ]
+	// 1. "Hello, World!" 문자열을 리턴하는 getMessage() 함수 정의
+	function getMessage () {
+		console.log("함수호출됨!")
+		return "Hello, World!";
+	}
+	
+	// 2. 1 ~ 10 까지의 합 계산 후 합계를 리턴하는 getTotal() 함수 정의
+	function getTotal () {
+		let sum = 0;
+		for (let i = 1; i <= 10; i++) {
+			sum += i;
+		}
+		return sum;
+	}
+	
+	// -----------------------------------------------------
+	// 1. getMessage() 함수를 호출하여 리턴되는 문자열을 변수 data에 저장 후 출력
+// 	let data = getMessage();
+// 	document.write(data + "<br>");
+	document.write(getMessage() + "<br>");
+	
+	// 2. getTotal() 함수를 호출하여 1 ~ 10 까지의 합을 리턴받아 출력
+	let total = getTotal();
+// 	let total = 55;
+	document.write("total =  " + total);
+	
+	document.write("total =  " + getTotal());
+// 	document.write("total =  " + 55);
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

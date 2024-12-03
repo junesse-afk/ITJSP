@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function check () {
+	// 셀렉트박스의 선택 항목에 접근하려면 셀렉트박스 요소 객체의 value 속성값 접근
+	// => 선택된 항목(option 태그)의 value 속성값이 셀렉트박스 자체의 value 속성값으로 설정됨
+	let selectedValue = document.fr.fruits.value;
+	console.log(selectedValue);
+}
+
+function itemSelected() {
+	debugger;
+	let selectedValue = document.fr.fruits2.value;
+	let input = document.fr.fruit;
+	
+	if (selectedValue == "") { // "과일을 선택하세요" 가 선택됨
+		input.readOnly = true;
+	} else {
+		input.readOnly = false;
+		input.value = selectedValue;
+	}
+	
+// 	input.value = selectedValue;
+	
+	
+	
+}
+
+
+</script>
+</head>
+<body>
+
+	<h1>test28.html</h1>
+	<form action="test28_2.html" name="fr">
+		<!-- 폼 태그 셀렉트박스에 required 속성 지정 시 아무것도 선택하지 않아도 submit 동작 -->
+		<!-- 즉, 기본적으로 하나의 항목이 무조건 선택되므로 required 불필요 -->
+<!-- 		<select name="fruits"> -->
+<!-- 			<option value="Apple">사과</option> -->
+<!-- 			<option value="Banana">바나나</option> -->
+<!-- 			<option value="Orange">오렌지</option> -->
+<!-- 		</select> -->
+		
+		<!-- 
+		사용자로부터 셀렉트박스 항목을 반드시 직접 선택하도록 하려면
+		첫번째 항목(option 태그)으로 빈값(널스트링"")을 갖는 항목을 하나 추가하고
+		해당 항목이 선택되어 있을 경우에는 항목을 선택하지 않은 것으로 간주
+		 -->
+		<select name="fruits" required="required">
+			<option value="">과일을 선택하세요</option>
+			<option value="Apple">사과</option>
+			<option value="Banana" disabled>바나나</option>
+			<option value="Orange">오렌지</option>
+		</select>
+		<input type="button" value="선택값 확인" onclick="check()">
+		<hr>
+		
+		<select name="fruits2" oninput="itemSelected()">
+			<option value="">과일을 선택하세요</option>
+			<option value="Apple">사과</option>
+			<option value="Banana">바나나</option>
+			<option value="Orange">오렌지</option>
+		</select>
+		<input type="text" name="fruit">
+		
+		<hr>
+		<input type="submit" value="전송">
+	</form>
+	
+	
+	
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+[ 외부 자바스크립트 파일 불러오기 ]
+- <script> 태그의 src 속성을 통해 불러올 외부 자바스크립트 파일 지정
+- 절대경로 또는 상대경로 모두 사용 가능
+- 외부 자바스크립트와 내부자바스크립트 모두 차례대로 실행됨
+- 주의! 외부 파일을 불러오는 <script> 태그 내에 자바스크립트 코드 작성 시 동작하지 않는다!
+ -->
+ <!-- 현재 파일(test4.html)과 같은 위치에 있는 test4.js 파일 지정하려면 상대경로 지정 -->
+<script src="./test4.js"></script>
+<!-- 위의 <script> 태그가 먼저 실행되므로 test4.js 파일을 로딩하여 스크립트 실행 후 -->
+<!-- 아래쪽의 <script> 태그가 실행됨. 따라서, "확인" 출력된 후 "확인2" 출력됨 -->
+<script type="text/javascript">
+	alert("확인2");
+</script>
+
+<!-- webapp/js 디렉토리의 test4_outer.js 파일 포함시키기 -->
+<script src="./test4.js"></script>
+
+</head>
+<body>
+
+</body>
+</html>

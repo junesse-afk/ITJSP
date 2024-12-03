@@ -1,0 +1,10 @@
+package jsp10_jdbc;
+
+// STUDENT 테이블에 대응하는 StudentDTO 클래스 정의
+public class StudentDTO {
+	// 멤버변수 선언 (= 컬럼명)
+	private int idx;
+	private String name;
+	
+	
+}

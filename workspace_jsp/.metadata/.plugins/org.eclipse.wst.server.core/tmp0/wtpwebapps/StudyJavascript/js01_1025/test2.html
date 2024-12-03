@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+/* 
+	[ 자바스크립트 변수 ]
+	- 데이터 저장 공간
+	- 변수 선언 기본 문법: 변수선언키워드 변수명 = 값;
+	- 다만, 자바와 달리 데이터타입을 별도로 지정하지 않고 var 또는 let 또는 const로 선언
+	  (세 가지 선언 방식은 각각 다른 특징이 부여됨)
+	- 변수명은 자바 식별자 작성 규칙과 거의 동일한 규칙 적용
+	- 자바스크립트에서 사용되는 데이터타입은
+	  문자(= 문자열, string), 숫자(number), 논리(boolean), 특수값 undefined, null 등 사용됨
+	  => 변수 선언 및 값 할당 시 자동으로 해당 변수의 데이터타입이 결정됨
+	- 변수 또는 데이터의 데이터타입 확인 방법: typeof 키워드 사용
+	  => 기본문법 1) typeof 변수명 또는 typeof 데이터
+	  => 기본문법 2) typeof(변수명) 또는 typeof(데이터)
+*/
+
+	// 변수 선언 기초
+// 	var num;	// 변수 num 선언
+// 	let num2;	// 변수 num2 선언
+// 	const num3;	// 이클립스 상에서 또는 웹브라우저 실행 시 오류 발생
+	
+	// 변수 선언 및 다양한 데이터 저장
+	var str;	// 변수 str 선언 (변수 초기화는 수행하지 않음)
+	console.log("str = " + str); // str = undefined
+	// 자바스크립트 변수는 전달되는 데이터에 따라 타입이 결정됨
+	// 만약, 초기화를 수행하지 않았을 경우 값이 정의되지 않았다는 의미의 undefined 값이 출력
+	console.log("str 타입 = " + typeof(str));
+
+	// str 변수에 문자(문자열) "자바스크립트" 저장
+	str = "자바스크립트";
+	// => 이때, 변수 str의 데이터타입이 string 타입으로 변경(결정)됨
+	console.log("str = " + str);
+	console.log("str 타입 = " + typeof(str));
+	
+	// str2 변수 선언 및 "javascript" 초기화 문장을 한 문장으로 결합
+	var str2 = "javascript";
+	// str2 = javascript, str2 타입 = string
+	console.log("str2 = " + str2 + ", str2 타입 = " + typeof(str));
+	
+	// --------------------------------------------------------------
+	// 숫자 데이터 저장 시 정수, 실수 구분없이 number 타입으로 취급
+	var num = 20;
+	console.log("num = " + num + ", num 타입 = " + typeof(num));
+	
+	var num2 = 3.14;
+	console.log("num2 = " + num2 + ", num2 타입 = " + typeof(num2));
+	
+	// 변수 b 선언 후 논리값 true 또는 false 로 초기화
+	var b = true;
+	console.log("b = " + b + ", b 타입 = " + typeof(b));
+	
+	// 웹브라우저 화면에 데이터 출력
+	// => document.write() 사용 시 HTML 태그도 사용 가능
+	document.write("b = " + b + ", b 타입 = " + typeof(b) + "<br>");
+	
+	// =============================================================
+	var data = 100;	
+	document.write("data = " + data + ", data 타입 = " + typeof(data) + "<br>");
+	// => data = 100, data 타입 = number
+	
+	// 기존 data 변수에 새로운 값 "Hello, World" 할당 (대입 = 저장)
+	// => 기존 변수의 데이터타입과 관계없이 아무 타입의 데이터 저장 가능하며
+	//    해당 데이터의 타입에 맞게 변수 데이터타입이 변경된다!
+	//   (자바는 다른 데이터타입을 저장할 수 없다!)
+	data = "Hello, World";
+	document.write("data = " + data + ", data 타입 = " + typeof(data) + "<br>");
+	
+	// 주의! var 키워드를 통해 변수 선언 시
+	// 기존에 존재하는 변수와 동일한 이름의 변수를 중복 선언하더라도 오류가 발생하지 않는다!
+	// 정상적으로 기존 변수값을 덮어쓰게 됨!
+	var data = 3.14;	
+	document.write("data = " + data + ", data 타입 = " + typeof(data) + "<br>");
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

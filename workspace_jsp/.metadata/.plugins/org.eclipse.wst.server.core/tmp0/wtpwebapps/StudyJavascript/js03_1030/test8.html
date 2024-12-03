@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	// 자바스크립트의 조건식 작성 시 특이사항
+	// - 자바스크립트에서 조건식에 boolean 타입 데이터 전달 시
+	//   해당 데이터가 true이면 판별결과도 true, 데이터가 false이면 판별결과도 false
+	// - 자바스크립트에서 boolean 타입이 아닌 데이터를 조건식에 사용 가능한데
+	//   전달된 데이터(값)이 존재하기만 하면 판별 결과는 무조건 true
+	//   데이터가 존재하지 않으면 false로 판별됨  (값 자체의 존재 여부만 판별)
+	
+// 	let data = false;
+// 	let data = "Hello, World!";
+// 	let data = 0;
+// 	let data = 3.14;
+// 	let data = 0.0;
+// 	let data = ""; // 문자열 "데이터가 존재하지 않으므로" 조건문에서 false
+				   // => 이때, 빈 문자열("")을 널스트링(null string)이라고 한다!
+// 	let data = null; // 특수값 null도 "무언가가 없음"을 의미하므로 조건문 판별 결과 false
+	let data; // 값이 저장되지 않은 변수는 undefined 이며, "값이 없음"을 의미하여 false
+	
+	if (data) {
+		console.log(data + ": true 입니다!");
+	} else {
+		console.log(data + ": false 입니다!");
+	}
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

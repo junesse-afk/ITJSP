@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	// [ 전달인자 X, 리턴값 X 함수 연습 ]
+	
+	// 1. "Hello, World!" 문자열을 10번 반복 출력하는 hello() 함수 정의
+	function hello () {
+		for (let i = 0; i < 10; i++) {
+			document.write(i + ": Hello, World!<br>");	
+		}
+	}
+	
+	hello();
+	
+	// 2.  1 ~ 10 까지의 합을 계산하여 출력하는 sum() 함수 정의
+	function sum () {
+		let total = 0;
+		for (let i = 1; i <= 10; i++) {
+			total += i;
+		}
+		document.write("total: " + total + "<br>");
+	}
+	
+	sum();
+	
+	document.write("<hr>");
+	
+	// 3. 구구단 2단을 출력하는 gugudan() 함수 정의
+	// 출력형식) < 2단 >
+	//		   2 * 1 = 2
+	//		   2 * 2 = 4
+	//		   2 * 3 = 6
+	//         ... (생략)
+	//		   2 * 9 = 18
+	function gugudan () {
+		document.write("< 2단 ><br>");
+// 		document.write("2 * 1 = 2<br>");
+// 		document.write("2 * 2 = 4<br>");
+// 		document.write("2 * 3 = 6<br>");
+// 		document.write("2 * 4 = 8<br>");
+// 		document.write("2 * 5 = 10<br>");
+// 		document.write("2 * 6 = 12<br>");
+// 		document.write("2 * 7 = 14<br>");
+// 		document.write("2 * 8 = 16<br>");
+// 		document.write("2 * 9 = 18<br>");
+		
+		for (let i = 1; i <= 9; i++) {
+			let result = 2 * i;
+			document.write("2 * " + i + " = " + result + "<br>");
+		}
+	}
+	
+	gugudan();
+	
+	
+	
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

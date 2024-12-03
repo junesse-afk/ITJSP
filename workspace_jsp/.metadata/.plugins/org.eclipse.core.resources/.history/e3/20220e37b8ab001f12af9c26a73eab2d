@@ -1,0 +1,14 @@
+package jsp09_servlet;
+
+import jakarta.servlet.http.HttpServlet;
+
+/*
+ * [ 서블릿(Servlet) ]
+ * - 웹에서의 요청을 처리할 수 있는 자바 클래스를 서블릿 클래스 라고 함
+ * - 서블릿 클래스를 정의하려면 javax.servlet.http.HttpServlet 클래스를 상속받아 정의
+ * - 서블릿 기능을 사용하려면 추가적인 라이브러리(servlet-api.jar) 등록 필요함
+ * */
+
+public class TestServlet1 extends HttpServlet {
+
+}

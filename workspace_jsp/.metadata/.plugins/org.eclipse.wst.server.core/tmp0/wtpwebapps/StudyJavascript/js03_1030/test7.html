@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+/*
+	3. if ~ else if 문
+	- if문에 주어진 조건을 판별하여 true일 경우 if문의 블럭 내의 문장들을 수행하고
+	  false일 경우 다음 if문 (else if) 의 조건을 판별한 후 
+	  true이면 else if 내의 문장들을 수행, 아니면 다음 else if 문 조건을 계속 판별함
+	  => 만약, 모든 조건식의 판별 결과가 false 이면 else문이 있을 경우 해당 블럭 문장 수행
+	     (단, else 문은 생략 가능함)
+	- 주의! if문은 위에서부터 순서대로 조건을 판별하므로
+	  else 문은 항상 가장 마지막 조건으로 기술해야한다!
+	  
+	
+	< 기본 문법 >
+	if (조건식1) {
+		// 조건식1 판별 결과가 true일 때 실행할 문장들...
+	} else if (조건식2) {
+		// 조건식1 판별 결과가 false이고, 조건식2 판별결과가 true일 때 실행할 문장들...
+	} else if (조건식n) {
+		// 조건식1, 2 판별 결과가 false이고, 조건식n 판별과가 true일 때 실행할 문장들...
+	} else {
+		// 위의 모든 조건식 판별결과 false일 때 실행할 문장들... (else 문 생략가능)
+	}
+ */
+ 
+ 	// 변수 num3 선언 및 0으로 초기화 후 출력
+ 	let num3 = 0;
+ 	console.log("num3 = " + num3);
+ 
+ 	// 변수 num3에 대해 "양수", "음수", "0이다!" 세 가지 경우의 수 판별
+ 	if (num3 > 0) {
+ 		console.log("양수!");
+ 	} else if (num3 < 0) {
+ 		console.log("음수!");
+ 	} else if (num3 == 0) {
+ 		console.log("0이다!");
+ 	}
+ 	
+ 	// 변수 num3에 대해 "양수", "음수", "0이다!" 세 가지 경우의 수판별
+ 	// => 이때, 만약, 0보다 크다와 0보다 작다를 먼저 판별했을 경우에는
+ 	//    남은 경우의 수는 무조건 0일 때 밖에 존재하지 않으므로 else if 대신 else 문으로 처리 가능
+ 	if (num3 > 0) {
+ 		console.log("양수!");
+ 	} else if (num3 < 0) {
+ 		console.log("음수!");
+ 	} else {
+ 		console.log("0이다!");
+ 	}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

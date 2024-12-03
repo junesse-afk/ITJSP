@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>test4.html - form 태그</h1>
+	<!-- 
+	<form> 태그 - 양식 태그
+	- 사용자와 웹어플리케이션(사이트)간의 상호 작용이 가능하도록 해주는 태그(기술)
+	- 사용자로부터 입력하는 데이터 형식을 제공하는 태그들을 묶어주는 태그이며
+	  입력된 데이터를 다른 페이지로 전송하는 역할을 수행하는 태그
+	  => 전송되는 데이터는 서버측(JSP 등 = 백엔드)에서 처리할 수 있음
+	- <form></form> 형식으로 사용하며 시작태그와 끝태그 사이에 또 다른 form 태그가 올 수 없음
+	
+	< form 태그 내부에서 사용 가능한 입력 양식 태그 >
+	1. <input type="text">: 사용자로부터 텍스트 한 줄 입력받는 속성
+	2. <input type="number">: 사용자로부터 숫자를 입력받는 속성
+	3. <input type="password">: 사요자로부터 텍스트 한줄 입력받는 속성 (데이터 숨김)
+	4. <input type="checkbox">: 사용자로부터 복수개의 항목을 체크하도록 하는 속성
+	5. <input type="radio">: 사용자로부터 단일 항목을 선택하도록 하는 속성
+	6. <input type="date">: 사용자로부터 날짜를 선택하도록 하는 속성(캘린더 선택 또는 입력 가능)
+	7. <input type="button">: 클릭 동작을 받도록 하는 속성(별도의 기능 연결 필요 - 자바스크립트)
+	8. <input type="submit">: 버튼과 생김새 동일하나 <form> 태그 내의 입력 항목들을
+					action 속성에 지정된 위치로 전송 및 이동하는 역할
+	9. <input type="reset">: 버튼과 생김새는 동일하나 <form> 태그 내의 입력 항목들에
+					입력된 데이터를 초기화하는 역할		
+	-------------------------------------------------------------------
+	10. <select></select> & <option></option>
+		: 사용자로부터 option 태그에 지정된 항목을 선택하도록 하는 태그 
+		  (셀렉트박스 & ComboBox & DropDownList(DDL))
+	11. <textarea></textarea>: 여러 줄을 입력받을 수 있는 태그	  
+	 -->
+
+	<!-- 입력 양식을 하나로 묶어줄 form 태그 생성 -->
+	<!-- submit 버튼 클릭 시 action 속성에 지정된 URL(주소) 또는 파일로 이동하면서 데이터 전송 -->
+	<form action="test4_result.html">
+		<!-- <fieldset> 태그를 사용하여 입력 항목에 대한 시각적으로 그룹화 가능 -->
+		<!-- <fieldset> 태그를 내에 <legend> 태그를 사용하여 그룹화된 항목의 제목 표시 가능 -->
+		<fieldset>
+			<legend>텍스트 입력 항목 연습</legend>
+			<!-- type 속성을 통해 다양한 형식의 입력 요소 지정 가능(생략시 기본값 text) -->
+			<input type="text"><br>			
+			<!-- 텍스트박스에서 엔터키 입력 시 submit 동작 수행됨 -->
+			<!-- 텍스트박스에 placeholder 속성을 통해 입력창 배경에 텍스트 표시 가능 -->
+			<input type="text" placeholder="이름을 입력하세요"><br>
+			<!-- value 속성 지정 시 입력 값을 미리 설정 가능  -->
+			<input type="text" value="차동원" name="nm"><br>
+			<!-- name 속성 지정 시 데이터 전송 시 사용할 이름 지정 가능 -->
+			<input type="text" value="admin" name="id"><br>
+			<!-- readonly 속성 지정 시 해당 입력창 잠금 (편집 불가 = 일기 전용) -->
+			<!-- readonly 또는 readonly="readonly" 모두 사용 가능 -->
+			<input type="text" value="차동원" readonly>
+			
+		</fieldset>
+		<input type="submit">
+	</form>
+
+
+
+
+
+</body>
+</html>

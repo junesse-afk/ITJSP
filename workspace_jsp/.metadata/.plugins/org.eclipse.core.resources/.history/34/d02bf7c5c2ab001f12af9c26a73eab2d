@@ -1,0 +1,23 @@
+package jsp09_servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+// web.xml 파일에 서블릿 매핑 내용을 기술하지 않고
+// 서블릿 클래스 정의 시 @WebServlet 어노테이션으로 매핑도 가능함
+@WebServlet("/myServlet3")
+public class TestServlet3 extends HttpServlet {
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

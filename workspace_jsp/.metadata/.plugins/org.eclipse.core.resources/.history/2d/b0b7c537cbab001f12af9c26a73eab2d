@@ -1,0 +1,34 @@
+package jsp09_servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+// xxx.test5로 끝나는 모든 서블릿 주소 매핑
+@WebServlet("*.test5")
+public class TestServlet5 extends HttpServlet {
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doProcess(request, response);
+	}
+	
+	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) {
+		System.out.println("TestServlet5 - doProcess()");
+		
+		// 요청 주소가 특정 패턴으로 된 주소일 경우
+		// 해당 요청 주소를 판별하여 각각 다른 작업을 수행할 수 있다!
+		// 이때, 요청 주소를 추출하기 위해서는 요청 정보를 관리하는 HttpServletRequest 객체의
+		// getServletPath() 메서드 호출하여 서블릿 주소를 리턴받아 문자열 비교로 판별!
+		
+	}
+	
+	
+	
+}

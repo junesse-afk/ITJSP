@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>test4.html - form 태그</h1>
+	<!-- 
+	<form> 태그 - 양식 태그
+	- 사용자와 웹어플리케이션(사이트)간의 상호 작용이 가능하도록 해주는 태그(기술)
+	- 사용자로부터 입력하는 데이터 형식을 제공하는 태그들을 묶어주는 태그이며
+	  입력된 데이터를 다른 페이지로 전송하는 역할을 수행하는 태그
+	  => 전송되는 데이터는 서버측(JSP 등 = 백엔드)에서 처리할 수 있음
+	- <form></form> 형식으로 사용하며 시작태그와 끝태그 사이에 또 다른 form 태그가 올 수 없음
+	
+	< form 태그 내부에서 사용 가능한 입력 양식 태그 >
+	1. <input type="text">: 사용자로부터 텍스트 한 줄 입력받는 속성
+	2. <input type="number">: 사용자로부터 숫자를 입력받는 속성
+	3. <input type="password">: 사요자로부터 텍스트 한줄 입력받는 속성 (데이터 숨김)
+	4. <input type="checkbox">: 사용자로부터 복수개의 항목을 체크하도록 하는 속성
+	5. <input type="radio">: 사용자로부터 단일 항목을 선택하도록 하는 속성
+	6. <input type="date">: 사용자로부터 날짜를 선택하도록 하는 속성(캘린더 선택 또는 입력 가능)
+	7. <input type="button">: 클릭 동작을 받도록 하는 속성(별도의 기능 연결 필요 - 자바스크립트)
+	8. <input type="submit">: 버튼과 생김새 동일하나 <form> 태그 내의 입력 항목들을
+					action 속성에 지정된 위치로 전송 및 이동하는 역할
+	9. <input type="reset">: 버튼과 생김새는 동일하나 <form> 태그 내의 입력 항목들에
+					입력된 데이터를 초기화하는 역할		
+	-------------------------------------------------------------------
+	10. <select></select> & <option></option>
+		: 사용자로부터 option 태그에 지정된 항목을 선택하도록 하는 태그 
+		  (셀렉트박스 & ComboBox & DropDownList(DDL))
+	11. <textarea></textarea>: 여러 줄을 입력받을 수 있는 태그	  
+	 -->
+
+	<!-- 입력 양식을 하나로 묶어줄 form 태그 생성 -->
+	<!-- submit 버튼 클릭 시 action 속성에 지정된 URL(주소) 또는 파일로 이동하면서 데이터 전송 -->
+	<form action="test4_result.html">
+		<!-- <fieldset> 태그를 사용하여 입력 항목에 대한 시각적으로 그룹화 가능 -->
+		<!-- <fieldset> 태그를 내에 <legend> 태그를 사용하여 그룹화된 항목의 제목 표시 가능 -->
+		<fieldset>
+			<legend>텍스트 입력 항목 연습</legend>
+			<!-- type 속성을 통해 다양한 형식의 입력 요소 지정 가능(생략시 기본값 text) -->
+			<input type="text"><br>			
+			<!-- 텍스트박스에서 엔터키 입력 시 submit 동작 수행됨 -->
+			<!-- 텍스트박스에 placeholder 속성을 통해 입력창 배경에 텍스트 표시 가능 -->
+			<input type="text" placeholder="이름을 입력하세요"><br>
+			<!-- value 속성 지정 시 입력 값을 미리 설정 가능  -->
+			<input type="text" value="차동원" name="nm"><br>
+			<!-- name 속성 지정 시 데이터 전송 시 사용할 이름 지정 가능 -->
+			<input type="text" value="admin" name="id"><br>
+			<!-- readonly 속성 지정 시 해당 입력창 잠금 (편집 불가 = 일기 전용) -->
+			<!-- readonly 또는 readonly="readonly" 모두 사용 가능 -->
+			<input type="text" value="차동원" readonly><br>
+			<!-- disabled 속성 지정 시 입력창 비활성화(readonly와 유사하나 역할 다름) -->
+			<input type="text" value="차동원" disabled="disabled"><br>
+			<hr>
+			<!-- tyope 속성 "number" 지정 시 숫자 입력만 가능 -->
+			<input type="number"><br>
+			
+			<!-- type 속성 "password" 지정 시 입력 항목 숨김 처리 -->
+			<input type="password" id="pass" placeholder="패스워드 입력"><br>
+			
+			<!-- <textarea> 태그 사용 시 여러줄 입력 가능한 입력창 생성 -->
+			<!-- rows, cols 속성 설정 시 영문자, 숫자, 특수문자 기준 행과 열 크기 지정 가능 -->
+<!-- 			<textarea rows="5" cols="30"></textarea> -->
+			<!-- 텍스트박스와 달리 텍스트에어리어는 시작태크와 끝태그 사이에 텍스트 입력해야 표시됨 -->
+			
+			<textarea rows="5" cols="30">안녕하세요</textarea>
+		</fieldset>
+		<fieldset>
+			<legend>선택 항목 연습</legend>
+			<!-- input 태그 type 속성을 "radio" 지정 시 단일 항목 선택 가능한 라디오 버튼 생성 -->
+			성별:
+			<input type="radio">남
+			<input type="radio">여<br>
+			<!-- 주의! 항목들을 그룹화하여 단일 선택 가능하도록 하려면 -->
+			<!-- 각 항목들의 name 속성값을 동일하게 지정해야한다! -->
+			<!-- 단, 그룹화는 물리적으로 붙어있지 않아도 지정 가능함 -->
+			성별:
+			<input type="radio" name="gender">남
+			<input type="radio" name="gender">여<br>
+			<!-- 
+			라디오버튼이나 체크박스 등 선택 항목 선택 시
+			정확히 아이콘을 클릭하지 않아도 텍스트만 클릭해도 선택이 가능하게 하려면
+			<label> 태그 사용하여 텍스트를 감싼 후
+			<label> 태그 내의 for 속성으로 이름을 지정한 뒤
+			라디오버튼 등의 태그에 id 속성으로 동일한 이름을 지정
+			또한, 라디오버튼에 checked 속성 지정 시 기본값으로 해당 항목 선택되어 있음
+			 -->
+			
+			
+			
+			
+		</fieldset>
+		
+		
+		
+		<input type="submit">
+	</form>
+
+
+
+
+
+</body>
+</html>

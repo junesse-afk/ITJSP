@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	// 연습문제
+	// =======================================
+	// 1. 숫자 1개(num)를 변수에 저장 후 짝수, 홀수, 0 판별하여 출력
+	// => 출력형식: "XX: 짝수!", "XX: 홀수!", "XX: 0!" 출력
+	let num = 2;
+	
+	if (num == 0) {
+		console.log(num + ": 0");
+	} else if (num % 2 == 1) {
+		console.log(num + ": 홀수");
+	} else {
+		console.log(num + ": 홀수");
+	}
+	
+	// 2. 숫자 1개(age)를 변수에 저장 if문으로 조건 판별
+	// 1) 나이(age)가 "10대" 인지 판별
+	// => 출력형식: "XXX세: 10대입니다!", "XXX세: 10대가 아닙니다!" 출력
+	
+	let age2 = 18;
+	
+	if (10 <= age2 && age2 < 20) {
+		console.log(`${age2}세: 10대입니다!`);
+	} else {
+		console.log(age2 + "세: 10대가 아닙니다!");
+	}
+	
+	// 3. 입력받은 나이에 대해 놀이동산 입장료 계산 후 출력하기
+	// => 조건1) 기본 입장료 50000원 (변수 fee 저장)
+	// => 조건2) 5세 미만이거나 65세 이상일 경우 입장료 100% 할인 (= 0원)
+	// => 조건3) 5세 ~ 19세 까지 입장료 50% 할인 (= 25000원)
+	// => 조건4) 20대일 경우 입장료 30% 할인 (= 35000원)
+	// => 조건5) 그 외 나머지의 경우 입장료 할인 없음 (= 50000원)
+	// => 출력형식: "xx세의 입장료는 yyyy원입니다."
+	
+	let fee = 50000;
+	let age = prompt("나이 입력");
+	
+	if (age < 5 || age >= 65) {
+		fee = 0;
+	} else if (age >= 5 && age <= 19) {
+		fee *= 0.5;
+	} else if (age >= 20 && age < 30) {
+		fee *= 0.7;
+	} 
+	
+	console.log(age + "세의 입장료는 " + fee + "원입니다.");
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

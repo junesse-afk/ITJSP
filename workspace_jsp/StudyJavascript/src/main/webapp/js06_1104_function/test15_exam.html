@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	// [3. 전달인자 O, 리턴값 X 함수 연습]
+	// 1. 정수 1개(x)를 전달받아 1 ~ x 까지의 합을 계산 후 출력하는 함수 sum() 정의
+	// ex) sum(10) 호출 시: "1 ~ 10 까지의 합: 55" 출력
+	function sum (x) {
+		let sum = 0;
+		for (let i = 1; i <= x; i++) {
+			sum += i;
+		}
+		document.write("1 ~ 10 까지의 합: " + sum);
+	}
+	sum(172); 
+	
+	// 2. 아이디(id), 패스워드(passwd)를 전달받아 저장되어 있는 아이디, 패스워드와 비교 후
+	//    둘 다 일치하면 "로그인 성공!" 출력, 아니면 "로그인 실패!" 출력하는 함수 login() 정의
+	function login (id, passwd) {
+		let dbId = "admin";
+		let dbPasswd = "1234";
+		
+// 		if (id == dbId && passwd == dbPasswd) {
+// 			alert("로그인 실패!");
+// 		} else {
+// 			alert("로그인 실패!");
+// 		}
+		
+		if (id != dbId || passwd != dbPasswd) {
+			alert("로그인 실패!");
+		}
+	}
+	
+	login("admin", "1234");
+	
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

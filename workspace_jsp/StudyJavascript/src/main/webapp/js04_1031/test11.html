@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+/*
+ * 
+ 	[ while 문 ]
+ 	- for문과 달리 조건식의 위치만 정해져 있고
+ 	  나머지 요소 (초기식, 증감식 => 생략도 가능)의 위치는 개발자가 임의로 지정하는 반복문
+ 	- 주로, 반복 횟수가 정해져 있지 않고, 상황에 따른 반복을 수행할 때 주로 사용
+ 	< 기본 문법 >
+ 	
+ 	[ 초기식(1); ] => 초기식은 while문보다 위(앞)쪽에 위치
+ 	
+ 	while (조건식(2)) {
+ 		// [증감식(4)]
+ 		// (3) 조건식 판별 결과가 true일 경우 반복 수행할 문장들...
+ 		// [증감식(4)]
+ 	}
+ 	
+ */
+	// for문을 사용하여 "Hello, World!" 문자열 3번 출력
+	for (let i = 0; i < 3; i++) {
+		document.write(i + ": Hello, World!<br>");
+	}
+ 	document.write("<hr>");
+ 	
+ 	var i = 0;	// 초기식
+ 	while (i < 3) {	// 조건식
+ 		// 위의 for문과 동일하게 동작하기 위해서는 출력문 다음에
+ 		// 증감식이 위치해야함
+//  	i++; // 증감식
+ 		document.write(i + ": Hello, World!<br>");
+ 		i++; // 증감식
+ 	}
+</script>
+
+</head>
+<body>
+
+	<hr>
+	<table border="1">
+		<tr>
+			<th colspan="10">테이블 연습</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+		</tr>
+		<!-- 자바스크립트를 활용하여 반복되는 특정 HTML 태그를 반복문으로 처리 가능 -->
+		<!-- 1개 행에 10개의 열을 생성하여 1 ~ 10 까지 데이터 표시 -->
+		<tr>
+			<script>
+			for (let i = 1; i <= 10; i++) {
+				document.write("<td>" + i + "</td>");
+			}
+			</script>
+		</tr>
+		<tr>
+			<script>
+			var i = 1;
+			while (i <= 10) {
+				document.write("<td>" + i + "</td>");
+				i++;
+			}
+			</script>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		// 무한 루프
+		// for문 또는 while문에서 조건식에 true 지정 시 무한 반복을 수행하는 무한 루프 구현 가능
+		// => 단, 반복을 종료하려면 반복문 내에서 if문 등을 통해 등적 조건 만족 시
+		//    break 문을 통해 반복문 종료 가능
+// 		for (;;) {}
+		
+		let count = 1;
+		
+		while (true) {
+			document.write("count = " + count + "<br>");
+			
+			if (count >= 5) {
+				break;
+			}
+			
+			count++;
+		}
+		
+		document.write("반복문 종료 후 count = " + count + "<br>");
+		
+		// ------------------------------------------------------------------
+		while (true) {
+			// 값을 1개 입력받아 변수 inputData 에 저장
+			let inputData = prompt("값을 입력하세요 (exit 입력시 종료)");
+			console.log(inputData);
+			
+			if (inputData == "exit") {
+				break;
+			}
+		}
+		
+	</script>
+
+</body>
+</html>

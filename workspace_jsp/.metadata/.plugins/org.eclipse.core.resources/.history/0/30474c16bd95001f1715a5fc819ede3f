@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	// [ 자바스크립트의 연산자 ]
+	// 변수 a 선언 및 정수 10으로 초기화
+	let a = 10;
+	console.log("a = " + a);
+	
+	// 변수 a 값을 1만큼 증가시키는 방법 3가지
+	a = a + 1;
+	console.log("a = " + a);
+	
+	a += 1;
+	console.log("a = " + a);
+	
+	a++;
+	console.log("a = " + a); // a = 13;
+
+	// 증감연산자의 위치에 따른 연산 과정의 차이
+	let b = a++ + 5;
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

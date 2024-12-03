@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+/*
+ if문
+ - 특정 조건에 따라 문장을 실행하는 조건문
+ - 자바에서의 if문과 동일
+ - 조건식은 반드시 결과가 true 또는 false인 식만 사용가능하며, 변수 사용도 가능
+ */
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

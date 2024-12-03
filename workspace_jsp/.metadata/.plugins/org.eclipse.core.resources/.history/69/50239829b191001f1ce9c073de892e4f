@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>test6.html - img 태그</h1>
+	<!-- 
+	이미지 표시: <img> 태그
+	기본 문법: <img src="표시할 이미지 경로 및 파일명" [옵션...]>
+	 -->
+	<!-- img 태그를 사용하여 현재 파일과 동일한 위치의 1.jpg 이미지 표시 -->
+<!-- 	<img src="1.jpg">  -->
+	<!-- img 태그의 width 속성으로 가로 크기, height 속성으로 세로 크기 지정 -->
+	<!-- title 속성으로 이미지에 마우스 오버 시 표시할 텍스트 지정 -->
+	<img src="1.jpg" width="200" height="150" title="해변가">
+	
+	<!-- 존재하지 않는 이미지 지정 시 이미지 없는 빈박스 표시됨 -->
+	<img src="3.jpg" width="200" height="150" alt="이미지를 불러올 수 없습니다">
+	
+	
+	
+	
+	
+
+</body>
+</html>

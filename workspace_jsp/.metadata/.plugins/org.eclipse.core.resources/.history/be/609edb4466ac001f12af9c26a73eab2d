@@ -1,0 +1,53 @@
+package jsp09_servlet;
+
+import java.io.IOException;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+// *.st 서블릿 주소 매핑
+@WebServlet("*.st")
+public class StudentServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doProcess(req, resp);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doProcess(req, resp);
+	}
+	
+	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String command = req.getServletPath();
+		System.out.println(command); // /asdasdasd.st
+		
+		if (command.equals("/StudentMain.st")) {
+			System.out.println("일로오나???");
+		}
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
